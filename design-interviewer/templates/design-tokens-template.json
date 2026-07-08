@@ -1,0 +1,128 @@
+{
+  "$schemaNote": "役割ベースのDesign Token雛形。color-system-guide.md / typography-guide.md / grid-layout-rules.md に対応。valueは確定値を入れる欄、exampleは参考値。exampleをそのまま出荷しない。最終的にCSS変数として出力する前提。",
+  "meta": {
+    "project": "",
+    "theme": "",
+    "mode": "light",
+    "notes": [
+      "色は好みではなく役割で定義する",
+      "アクセント色は最大1色。CTA色はaccentの1色に統一する",
+      "Error/Success/Warningはブランド色で上書きしない",
+      "通常本文のコントラスト比は原則4.5:1以上",
+      "ダークモードは単純反転ではなく、背景・Surface・Textを再設計する（彩度を下げ、地はダークグレー、文字は純白から僅かに落とす）"
+    ]
+  },
+  "color": {
+    "role": {
+      "primary": { "value": "", "example": "#1E293B", "usage": "ブランドと主要導線" },
+      "secondary": { "value": "", "example": "#334155", "usage": "補助導線と区分" },
+      "accent": { "value": "", "example": "#06B6D4", "usage": "CTAと最重要強調。CTA色はこの1色" },
+      "background": { "value": "", "example": "#F8FAFC", "usage": "ページ全体の背景" },
+      "surface": { "value": "", "example": "#FFFFFF", "usage": "カード、パネル、モーダル" },
+      "surfaceRaised": { "value": "", "example": "#FFFFFF", "usage": "浮いた面、強調パネル" },
+      "text": { "value": "", "example": "#0F172A", "usage": "主要文字" },
+      "mutedText": { "value": "", "example": "#64748B", "usage": "補助文字。本文には使いすぎない" },
+      "border": { "value": "", "example": "#E2E8F0", "usage": "境界、入力欄、区切り" }
+    },
+    "state": {
+      "error": { "value": "", "example": "#DC2626", "usage": "エラー、破壊的操作" },
+      "success": { "value": "", "example": "#16A34A", "usage": "完了、成功、正常" },
+      "warning": { "value": "", "example": "#D97706", "usage": "注意、未完了、要確認" },
+      "info": { "value": "", "example": "#2563EB", "usage": "案内、補足情報" }
+    }
+  },
+  "typography": {
+    "japaneseUiNote": "見出しと本文のサイズ差を明確にする。太字を多用しない。行間・行長・最小サイズは各項目のruleに従う",
+    "fontFamily": {
+      "sans": { "value": "", "example": "'Noto Sans JP', system-ui, sans-serif" },
+      "serif": { "value": "", "example": "'Noto Serif JP', serif" },
+      "mono": { "value": "", "example": "'Roboto Mono', monospace" }
+    },
+    "fontSize": {
+      "body": { "value": "", "example": "16px", "rule": "LP本文は16px以上、アプリ本文と操作ラベルは14px以上" },
+      "small": { "value": "", "example": "14px", "rule": "日本語UIで13px以下を本文や操作ラベルに使わない" },
+      "h4": { "value": "", "example": "20px" },
+      "h3": { "value": "", "example": "24px" },
+      "h2": { "value": "", "example": "32px" },
+      "h1": { "value": "", "example": "40px" },
+      "hero": { "value": "", "example": "48px" },
+      "kpi": { "value": "", "example": "32px" }
+    },
+    "fontWeight": {
+      "regular": { "value": "", "example": 400 },
+      "medium": { "value": "", "example": 500 },
+      "bold": { "value": "", "example": 700 }
+    },
+    "lineHeight": {
+      "body": { "value": "", "example": 1.8, "rule": "日本語本文はやや広め" },
+      "heading": { "value": "", "example": 1.3 },
+      "ui": { "value": "", "example": 1.45 }
+    },
+    "letterSpacing": {
+      "body": { "value": "0", "example": "0" },
+      "heading": { "value": "", "example": "0.01em" }
+    },
+    "maxTextWidth": { "value": "", "example": "38ch", "rule": "日本語本文は全角30-45字程度を目安に制限" }
+  },
+  "spacing": {
+    "base": { "value": "8px", "example": "8px" },
+    "scale": ["4px", "8px", "12px", "16px", "24px", "32px", "48px", "64px", "96px"],
+    "rule": "8px系を基本に、関連要素は近く(8-16px)、区切りは大きく(32-64px)"
+  },
+  "layout": {
+    "note": "重要度は色でなくサイズ・位置・余白・密度で表現する。本文は左揃え、中央揃えは短文のみ",
+    "grid": {
+      "columns": { "value": 12, "example": 12 },
+      "gutter": { "value": "", "example": "24px" },
+      "containerMaxWidth": { "value": "", "example": "1200px" },
+      "pageMargin": { "value": "", "example": "24px" }
+    },
+    "app": {
+      "headerHeight": { "value": "", "example": "64px" },
+      "sidebarWidth": { "value": "", "example": "260px" },
+      "detailPanelWidth": { "value": "", "example": "360px" }
+    }
+  },
+  "radius": {
+    "sm": { "value": "", "example": "6px" },
+    "md": { "value": "", "example": "12px" },
+    "lg": { "value": "", "example": "20px" }
+  },
+  "shadow": {
+    "card": { "value": "", "example": "0 1px 3px rgba(15, 23, 42, 0.08)", "rule": "影は控えめに。発光・過剰な影で情報設計をごまかさない（anti-ai-slop-rules.md）" },
+    "raised": { "value": "", "example": "0 4px 12px rgba(15, 23, 42, 0.10)" }
+  },
+  "component": {
+    "button": {
+      "height": { "value": "", "example": "44px" },
+      "radius": { "value": "", "example": "8px" },
+      "primaryColor": "accent"
+    },
+    "card": {
+      "background": "surface",
+      "border": "border",
+      "radius": "md"
+    },
+    "input": {
+      "height": { "value": "", "example": "40px" },
+      "border": "border",
+      "focusColor": "accent"
+    }
+  },
+  "cssVariablesExample": {
+    "note": "実装時はこの形でCSS変数化し、全要素を役割名で参照する",
+    ":root": {
+      "--color-primary": "<color.role.primary.value>",
+      "--color-accent": "<color.role.accent.value>",
+      "--color-bg": "<color.role.background.value>",
+      "--color-surface": "<color.role.surface.value>",
+      "--color-text": "<color.role.text.value>",
+      "--color-muted": "<color.role.mutedText.value>",
+      "--color-border": "<color.role.border.value>",
+      "--space-2": "8px",
+      "--space-3": "16px",
+      "--radius-md": "<radius.md.value>",
+      "--max-w": "<layout.grid.containerMaxWidth.value>"
+    }
+  }
+}
