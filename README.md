@@ -2,6 +2,11 @@
 
 個人用のClaude Agent Skillsコレクション。
 
+## Credits
+
+以下12個のスキルは [alexmcdonnell-airtable/hyperagent-public-skills](https://github.com/alexmcdonnell-airtable/hyperagent-public-skills) より複製したものです：
+airtable-kanban-work-tracker, brand-book-generator, briefing-trailer, business-simulation-operator-method, claymation-explainer, claymation-podcast-clips, landscaping-design-and-quote, muller-brockmann-grid-systems, nyc-subway-campaign, nyt-data-viz, veo-hyperframes, vignelli-canon-design-system
+
 ## 一覧と出所
 
 | スキル | 出所 | ライセンス |
